@@ -12,3 +12,6 @@ A simple Python CLI tool that displays system information.
 ## Run
 ```bash
 python system_info.py
+
+# system-info-cli
+
