@@ -45,7 +45,7 @@ python argprase_system_info.py --all --json
 
 ---
 
-## Usage
+## 🧠 Usage
 
 ```bash
 python argparse_system_info.py --os
