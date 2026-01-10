@@ -2,6 +2,7 @@ import platform
 import os
 import shutil
 import time
+import getpass  # add this
 
 def bytes_to_gb(bytes):
     return round(bytes / (1024 ** 3), 2)
@@ -36,8 +37,16 @@ def get_system_info():
     print(f"Disk Used     : {bytes_to_gb(used)} GB")
     print(f"Disk Free    : {bytes_to_gb(free)} GB")
 
-    print(f"Current User  : {os.getlogin() if hasattr(os, 'getlogin') else 'Unknown'}")
-    print(f"Uptime        : {round(time.time() - os.stat('/proc/1').st_ctime, 2)} seconds")
+    # Current user (fixed)
+    print(f"Current User  : {getpass.getuser()}")
+
+    # Uptime
+    try:
+        with open('/proc/uptime') as f:
+            uptime_seconds = float(f.readline().split()[0])
+        print(f"Uptime        : {round(uptime_seconds, 2)} seconds")
+    except Exception as e:
+        print(f"Uptime        : Not available ({e})")
 
     print("=" * 40)
 
