@@ -24,23 +24,23 @@ python system_info.py
 
 - OS info
 ```bash
-python system_info.py --os
+python argprase_system_info.py --os
 ```
 - RAM info
 ```bash
-python system_info.py --ram
+python argprase_system_info.py --ram
 ```
 - Disk info
 ```bash
-python system_info.py --disk
+python argparse_system_info.py --disk
 ```
 - All info
 ```bash
-python system_info.py --all
+python argprase_system_info.py --all
 ```
 - JSON output
 ```bash
-python system_info.py --all --json
+python argprase_system_info.py --all --json
 ```
 
 ---
@@ -48,11 +48,11 @@ python system_info.py --all --json
 ## Usage
 
 ```bash
-python system_info.py --os
-python system_info.py --ram
-python system_info.py --disk
-python system_info.py --all
-python system_info.py --all --json
+python argparse_system_info.py --os
+python argparse_system_info.py --ram
+python argparse_system_info.py --disk
+python argparse_system_info.py --all
+python argparse_system_info.py --all --json
 ```
 
 ---
